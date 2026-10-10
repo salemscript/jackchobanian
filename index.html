@@ -461,7 +461,27 @@ apply();save();global.PortfolioAppearance=Object.assign(api,{getState:()=>Object
   <ul class="chips" id="skills"><li><button type="button" aria-expanded="false" aria-controls="skillpanel">MATLAB</button></li><li><button type="button" aria-expanded="false" aria-controls="skillpanel">Microsoft Excel</button></li><li><button type="button" aria-expanded="false" aria-controls="skillpanel">PRO/II</button></li><li><button type="button" aria-expanded="false" aria-controls="skillpanel">Python</button></li><li><button type="button" aria-expanded="false" aria-controls="skillpanel">Onshape CAD</button></li></ul>
   <div class="skillpanel" id="skillpanel" aria-live="polite" hidden></div>
 
-  <h2 id="contact">Find me</h2>
+  <h2 id="contact">Find me</h2><style>
+/* Eyes cursor appears only while hovering the Find me heading. */
+#contact{cursor:none}
+.find-me-eyes{position:fixed;z-index:2200;pointer-events:none;font-size:27px;line-height:1;transform:translate(9px,7px);user-select:none}
+@media(hover:none),(pointer:coarse){#contact{cursor:auto}.find-me-eyes{display:none}}
+</style>
+<script>
+(function(){
+ const title=document.getElementById('contact');
+ if(!title)return;
+ const eyes=document.createElement('span');
+ eyes.className='find-me-eyes';eyes.textContent='👀';eyes.hidden=true;
+ document.body.appendChild(eyes);
+ title.addEventListener('pointermove',function(e){
+   if(e.pointerType==='touch')return;
+   eyes.style.left=e.clientX+'px';eyes.style.top=e.clientY+'px';eyes.hidden=false;
+ });
+ title.addEventListener('pointerleave',()=>{eyes.hidden=true});
+ window.addEventListener('blur',()=>{eyes.hidden=true});
+})();
+</script>
   <div class="grid">
     <a class="t" href="rez.pdf" data-emoji-burst="📄 📝"><b>Résumé</b><span>PDF</span></a>
     <a class="t" href="portfolio.pdf" data-emoji-burst="⚙️ 📐 📁"><b>Engineering portfolio</b><span>PDF, 2026</span></a>
