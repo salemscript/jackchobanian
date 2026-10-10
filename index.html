@@ -416,6 +416,14 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
 @media(max-width:540px){#chiller-plant{padding:20px}.chiller-metrics{grid-template-columns:1fr;gap:7px}.chiller-metrics>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 11px}.chiller-metrics dt{margin:0}.chiller-image-button img{max-height:180px}}
 @media print{.chiller-image-button{box-shadow:none}.chiller-dialog{display:none}}
 </style>
+<style id="chiller-metric-tooltip-style">
+.chiller-metrics>div{position:relative;cursor:help}
+.chiller-metrics dt{text-decoration:underline dotted;text-underline-offset:4px}
+.chiller-metrics>div:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.chiller-metric-tooltip{position:absolute;z-index:20;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%);width:max-content;max-width:230px;padding:8px 10px;border:1px solid var(--line);border-radius:7px;background:var(--tile);color:var(--ink);box-shadow:2px 3px 0 var(--shadow);font-size:.75rem;font-weight:400;line-height:1.4;text-align:center;opacity:0;visibility:hidden;pointer-events:none}
+.chiller-metrics>div:hover .chiller-metric-tooltip,.chiller-metrics>div:focus-within .chiller-metric-tooltip{opacity:1;visibility:visible}
+@media(max-width:540px){.chiller-metric-tooltip{left:12px;transform:none;max-width:calc(100vw - 100px)}}
+</style>
 </head>
 <body><svg class="theme-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="education-logo-tint" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feFlood style="flood-color:var(--accent)" result="theme-color"/><feComposite in="theme-color" in2="SourceAlpha" operator="in"/></filter></defs></svg><header class="site-nav"><a class="brand" href="#">JC<span>ENGINEERING PORTFOLIO</span></a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></header><div class="appearance theme-controls"><button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true" title="Switch to light mode"><svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 
@@ -520,9 +528,9 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
       <figcaption>Completed Chiller Plant Part 4 flowsheet · Click to enlarge</figcaption>
     </figure>
     <dl class="chiller-metrics">
-      <div><dt>Calculated gas outlet</dt><dd>−12.9998 <small>°F</small></dd></div>
-      <div><dt>Chiller duty</dt><dd>6.523 <small>MMBtu/hr</small></dd></div>
-      <div><dt>Refrigerant flow</dt><dd>831.471 <small>lb-mol/hr</small></dd></div>
+      <div tabindex="0" aria-describedby="chiller-gas-help"><dt>Calculated gas outlet</dt><dd>−12.9998 <small>°F</small><span class="chiller-metric-tooltip" id="chiller-gas-help" role="tooltip">Gas temperature leaving the chiller.</span></dd></div>
+      <div tabindex="0" aria-describedby="chiller-duty-help"><dt>Chiller duty</dt><dd>6.523 <small>MMBtu/hr</small><span class="chiller-metric-tooltip" id="chiller-duty-help" role="tooltip">Heat removed from gas per hour.</span></dd></div>
+      <div tabindex="0" aria-describedby="chiller-flow-help"><dt>Refrigerant flow</dt><dd>831.471 <small>lb-mol/hr</small><span class="chiller-metric-tooltip" id="chiller-flow-help" role="tooltip">Molar refrigerant flow through the chiller.</span></dd></div>
     </dl>
     <details class="chiller-results">
       <summary>Unit operation results</summary>
@@ -943,5 +951,6 @@ dialog.querySelector('.chiller-dialog-close').addEventListener('click',function(
 dialog.addEventListener('click',function(e){if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 dialog.addEventListener('close',function(){image.removeAttribute('src');trigger.focus();});
 })();</script>
+<script>(function(){document.querySelectorAll('.chiller-metrics>div').forEach(function(metric){metric.addEventListener('pointerdown',function(event){if(event.pointerType==='touch')metric.focus();});metric.addEventListener('keydown',function(event){if(event.key==='Escape')metric.blur();});});})();</script>
 </body>
 </html>
