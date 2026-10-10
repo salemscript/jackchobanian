@@ -377,14 +377,7 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
 /* Keep neutral grey outlines on Interests in both themes. */
 .interests-section .interests-list>span{border-color:#919ba5}
 </style>
-<style id="contact-section-refinement">
-.contact-intro{text-align:center;max-width:660px;margin:0 auto 1.5rem!important;padding:0 1rem}
-.contact-intro .contact-eyebrow{margin:0 0 .45rem;color:var(--accent2);font-size:.75rem;font-weight:700;letter-spacing:.14em}
-.contact-intro p:not(.contact-eyebrow){margin:0 auto 1rem;color:var(--ink);font-size:1rem;line-height:1.65;max-width:560px}
-.contact-email-link{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.7rem 1.2rem;border:1.5px solid var(--shoe-blue,var(--accent2));background:var(--tile);color:var(--ink);border-radius:8px;font-size:.9rem;font-weight:700;text-decoration:none;transition:transform .18s,background .18s,box-shadow .18s}
-.contact-email-link:hover,.contact-email-link:focus-visible{background:var(--tile-hover);transform:translateY(-2px);box-shadow:0 3px 0 var(--shadow)}
-@media(prefers-reduced-motion:reduce){.contact-email-link{transition:none}}
-</style>
+
 </head>
 <body><svg class="theme-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="education-logo-tint" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feFlood style="flood-color:var(--accent)" result="theme-color"/><feComposite in="theme-color" in2="SourceAlpha" operator="in"/></filter></defs></svg><header class="site-nav"><a class="brand" href="#">JC<span>ENGINEERING PORTFOLIO</span></a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></header><div class="appearance theme-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 
@@ -424,7 +417,7 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
     <h1>Jack Chobanian</h1>
     <p class="tag">Chemical and Materials Engineer</p>
     <p class="tag" style="font-size:1rem;margin-top:.4rem">B.S. Chemical Engineering, Cal Poly Pomona, Class of 2028</p>
-    <p class="intro">Chemical engineering student who <a id="verb" class="verb" href="#projects">builds things</a>.</p><div class="hero-actions"><a class="raised primary" href="#projects">View Projects <span aria-hidden="true">↓</span></a><a class="raised secondary" href="rez.pdf">Résumé <span aria-hidden="true">↗</span></a></div>
+    <p class="intro">Chemical engineering student who <a id="verb" class="verb" href="#projects">builds things</a>.</p><div class="hero-actions"><a class="raised primary" href="#projects">View Projects <span aria-hidden="true">↓</span></a><a class="raised secondary" href="rez.pdf">Résumé <span aria-hidden="true">↗</span></a><a class="raised secondary" href="mailto:jachobanian@gmail.com?subject=Engineering%20Opportunity">Get in touch <span aria-hidden="true">↗</span></a></div>
   </div>
 
   <h2 id="projects">Projects</h2>
@@ -547,9 +540,6 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
  window.addEventListener('blur',()=>{eyes.hidden=true});
 })();
 </script>
-  <div class="contact-intro">
-    <a class="contact-email-link" href="mailto:jachobanian@gmail.com?subject=Engineering%20Opportunity">Get in touch <span aria-hidden="true">↗</span></a>
-  </div>
   <div class="grid">
     <a class="t" href="rez.pdf" data-emoji-burst="📄 📝"><b>Résumé</b><span>PDF</span></a>
     <a class="t" href="portfolio.pdf" data-emoji-burst="⚙️ 📐 📁"><b>Engineering portfolio</b><span>PDF, 2026</span></a>
