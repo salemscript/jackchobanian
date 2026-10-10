@@ -373,28 +373,9 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
 @media(prefers-reduced-motion:reduce){.project-link,.t,.chips li{transition:none!important}}
 </style>
 
-<style id="footer-orcas-style">
-/* Small decorative pixel orcas, below the footer and wafer. */
-#footer-orcas{position:relative;isolation:isolate;width:100%;height:112px;margin:12px auto 0!important;overflow:hidden;pointer-events:none;user-select:none;contain:layout paint}
-#footer-orcas .orca-track{position:absolute;left:0;top:16px;width:calc(100% - 96px);height:48px;animation:footer-orca-cruise 28s linear infinite;animation-delay:-4s;will-change:transform}
-#footer-orcas .orca-facing{width:96px;height:48px;animation:footer-orca-turn 28s linear infinite;animation-delay:-4s;transform-origin:center}
-#footer-orcas .orca-sprite{display:block;width:100%;height:100%;overflow:visible;image-rendering:pixelated;shape-rendering:crispEdges;animation:footer-orca-bob 3.6s ease-in-out infinite}
-#footer-orcas .orca-tail{animation:footer-orca-tail 1.2s steps(2,end) infinite}
-#footer-orcas .orca-body,#footer-orcas .orca-tail{fill:#0b1117;stroke:#88949e;stroke-width:.35;stroke-linejoin:miter}
-#footer-orcas .orca-track--two{top:66px;width:calc(100% - 72px);height:36px;animation-duration:34s;animation-delay:-24s}
-#footer-orcas .orca-track--two .orca-facing{width:72px;height:36px;animation-duration:34s;animation-delay:-24s}
-#footer-orcas .orca-track--two .orca-sprite{animation-duration:4.2s;animation-delay:-1.7s}
-#footer-orcas .orca-track--two .orca-tail{animation-delay:-.5s}
-#footer-orcas.is-paused *{animation-play-state:paused!important}
-/* Interests use neutral silver-grey outlines in both themes. */
+<style id="interests-border-style">
+/* Keep neutral grey outlines on Interests in both themes. */
 .interests-section .interests-list>span{border-color:#919ba5}
-@keyframes footer-orca-cruise{0%,100%{transform:translateX(0)}50%{transform:translateX(100%)}}
-@keyframes footer-orca-turn{0%,47%{transform:scaleX(1)}50%,97%{transform:scaleX(-1)}100%{transform:scaleX(1)}}
-@keyframes footer-orca-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-@keyframes footer-orca-tail{0%,100%{transform:translateY(-.5px)}50%{transform:translateY(.5px)}}
-@media(max-width:480px){#footer-orcas{height:96px}#footer-orcas .orca-track{width:calc(100% - 80px);height:40px;top:12px}#footer-orcas .orca-facing{width:80px;height:40px}#footer-orcas .orca-track--two{width:calc(100% - 64px);height:32px;top:56px}#footer-orcas .orca-track--two .orca-facing{width:64px;height:32px}}
-@media(prefers-reduced-motion:reduce){#footer-orcas *{animation:none!important;will-change:auto!important}#footer-orcas .orca-track{transform:translateX(18%)}#footer-orcas .orca-track--two{transform:translateX(72%)}#footer-orcas .orca-track--two .orca-facing{transform:scaleX(-1)}}
-@media print{#footer-orcas{display:none!important}}
 </style>
 </head>
 <body><svg class="theme-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="education-logo-tint" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feFlood style="flood-color:var(--accent)" result="theme-color"/><feComposite in="theme-color" in2="SourceAlpha" operator="in"/></filter></defs></svg><header class="site-nav"><a class="brand" href="#">JC<span>ENGINEERING PORTFOLIO</span></a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></header><div class="appearance theme-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
@@ -576,45 +557,7 @@ footer{border-top:1px solid var(--shoe-blue);padding-top:1rem;margin-top:2.3rem}
 </div>
 
 
-<div id="footer-orcas" aria-hidden="true">
-  <div class="orca-track"><div class="orca-facing">
-<svg class="orca-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" aria-hidden="true" focusable="false">
-  <path class="orca-tail" d="M11 11H7V9H4V7H1V10H3V12H6V13H3V15H1V18H4V17H7V15H11Z"/>
-  <path class="orca-body" d="M9 11H13V9H19V7H22V4H24V1H26V3H27V8H32V9H37V10H40V12H43V14H44V17H42V19H38V21H29V20H23V19H18V17H13V15H9Z"/>
-  <path fill="#8b97a0" d="M18 10H22V9H25V11H22V12H18Z"/>
-  <path fill="#f5fbff" d="M14 14H19V16H26V17H33V18H40V17H43V18H41V19H38V20H30V19H23V18H18V16H14Z"/>
-  <path fill="#f5fbff" d="M32 11H36V12H38V14H36V15H32V14H31V12H32Z"/>
-  <path fill="#0b1117" d="M24 17H29V19H28V21H26V23H24V22H23V19Z"/>
-  <rect x="40" y="13" width="1" height="1" fill="#e4f2fa"/>
-</svg>
-  </div></div>
-  <div class="orca-track orca-track--two"><div class="orca-facing">
-<svg class="orca-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" aria-hidden="true" focusable="false">
-  <path class="orca-tail" d="M11 11H7V9H4V7H1V10H3V12H6V13H3V15H1V18H4V17H7V15H11Z"/>
-  <path class="orca-body" d="M9 11H13V9H19V7H22V4H24V1H26V3H27V8H32V9H37V10H40V12H43V14H44V17H42V19H38V21H29V20H23V19H18V17H13V15H9Z"/>
-  <path fill="#8b97a0" d="M18 10H22V9H25V11H22V12H18Z"/>
-  <path fill="#f5fbff" d="M14 14H19V16H26V17H33V18H40V17H43V18H41V19H38V20H30V19H23V18H18V16H14Z"/>
-  <path fill="#f5fbff" d="M32 11H36V12H38V14H36V15H32V14H31V12H32Z"/>
-  <path fill="#0b1117" d="M24 17H29V19H28V21H26V23H24V22H23V19Z"/>
-  <rect x="40" y="13" width="1" height="1" fill="#e4f2fa"/>
-</svg>
-  </div></div>
-</div>
-<script>
-(function(){
-  'use strict';
-  const cove=document.getElementById('footer-orcas');
-  if(!cove)return;
-  let visible=true;
-  function sync(){cove.classList.toggle('is-paused',!visible||document.hidden);}
-  if('IntersectionObserver' in window){
-    const observer=new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;sync();});
-    observer.observe(cove);
-  }
-  document.addEventListener('visibilitychange',sync);
-  sync();
-})();
-</script>
+
 </main>
 <script>
 (function(){
