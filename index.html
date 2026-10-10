@@ -350,6 +350,17 @@ apply();save();global.PortfolioAppearance=Object.assign(api,{getState:()=>Object
 .interests-list span{display:inline-flex;align-items:center;justify-content:center;text-align:center;max-width:100%;padding:.6rem 1rem;border:1.5px solid #b58a53;border-radius:999px;background:var(--tile);color:var(--ink);font-size:.9rem;font-weight:600;line-height:1.4}
 @media(max-width:480px){.interests-list span{width:100%;border-radius:12px}}
 </style>
+<style>
+/* Unified bronze skill pills and education course cards. */
+#skills.chips li,#skills.chips li:nth-child(n){border-color:#b58a53;--sc:#b58a53}
+#skills.chips li:hover,#skills.chips li:focus-within{border-color:#d4aa70}
+#skills.chips li.on{background:#b58a53;border-color:#b58a53}
+#skills.chips li.on button{color:#151f2b}
+#education .course,#education .course:nth-child(n){--c:#b58a53;border-color:#b58a53;border-left-color:#b58a53}
+#education .course h4{color:var(--ink)}
+/* Broncos badge coordinated with dark navy and bronze, retaining original logo artwork. */
+#education .edhead .cpp{width:3.4rem;height:3.4rem;object-fit:contain;box-sizing:border-box;padding:.35rem;border:2px solid #b58a53;border-radius:12px;background:#172a3e;filter:sepia(1) saturate(1.8) hue-rotate(345deg) brightness(1.14) drop-shadow(0 0 2px #b58a53)}
+</style>
 </head>
 <body><svg class="theme-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="education-logo-tint" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feFlood style="flood-color:var(--accent)" result="theme-color"/><feComposite in="theme-color" in2="SourceAlpha" operator="in"/></filter></defs></svg><header class="site-nav"><a class="brand" href="#">JC<span>ENGINEERING PORTFOLIO</span></a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></header><div class="appearance theme-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 
