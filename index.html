@@ -361,6 +361,32 @@ apply();save();global.PortfolioAppearance=Object.assign(api,{getState:()=>Object
 /* Broncos badge coordinated with dark navy and bronze, retaining original logo artwork. */
 #education .edhead .cpp{width:3.4rem;height:3.4rem;object-fit:contain;box-sizing:border-box;padding:.35rem;border:2px solid #b58a53;border-radius:12px;background:#172a3e;filter:sepia(1) saturate(1.8) hue-rotate(345deg) brightness(1.14) drop-shadow(0 0 2px #b58a53)}
 </style>
+<style id="portfolio-visual-polish">
+/* Shared navy + bronze visual system; preserve the original content and interactions. */
+:root[data-theme="light"]{--bg:#f5f7f9;--tile:#fff;--tile-hover:#edf2f6;--ink:#1d3042;--muted:#536678;--accent:#304e69;--accent2:#416b87;--accent3:#a47c48;--line:#cbd5de;--glow:#e8eef3;--shadow:#d5dde5;--panel:#eaf0f4;--bronze:#9a7141;--bronze-bright:#b58a53}
+:root[data-theme="dark"]{--bg:#111c2a;--tile:#1a2b3e;--tile-hover:#243b51;--ink:#edf3f7;--muted:#bac8d4;--accent:#bed3e5;--accent2:#91bad5;--accent3:#d7b17c;--line:#3c5268;--glow:#213b54;--shadow:#0b1622;--panel:#203448;--bronze:#c49b65;--bronze-bright:#dfb77f}
+body{background-color:var(--bg)}
+main{max-width:52rem}
+h2{border-color:var(--bronze);color:var(--ink);background:var(--tile);box-shadow:0 2px 0 var(--shadow)}
+:focus-visible{outline-color:var(--bronze-bright)}
+.card,#education,.skillpanel{border-color:var(--line);background:var(--tile)}
+.grid,.chips{border-color:var(--line)}
+.grid>.t,.project-showcase>.project-link,.project-showcase.project-shortcuts>.project-link{border:1.5px solid var(--bronze);background:var(--tile)}
+.grid>.t:hover,.grid>.t:focus-visible,.project-showcase>.project-link:hover,.project-showcase>.project-link:focus-visible{border-color:var(--bronze-bright);background:var(--tile-hover)}
+#skills.chips li,#skills.chips li:nth-child(n){--sc:var(--bronze);border-color:var(--bronze);background:var(--tile)}
+#skills.chips li.on{background:var(--bronze)}
+#skills.chips li.on button{color:#101e2c}
+#skills.chips li:hover{border-color:var(--bronze-bright)}
+.skillpanel{--sc:var(--bronze);border-left-color:var(--bronze)}
+.skillpanel h3,.skillpanel a{color:var(--ink)}
+#education .course,#education .course:nth-child(n){--c:var(--bronze);border-color:var(--line);border-left-color:var(--bronze);background:var(--bg)}
+#education .edhead .cpp{background:#192d43;border-color:var(--bronze);filter:drop-shadow(0 2px 3px rgba(0,0,0,.18));padding:.4rem}
+.interests-list span{border-color:var(--bronze);background:var(--tile);color:var(--ink)}
+.interests-section{margin-top:2rem;margin-bottom:2.25rem}
+.appearance.theme-controls .theme-toggle{border-color:var(--bronze)}
+footer{border-top:1px solid var(--bronze);padding-top:1rem;margin-top:2.3rem}
+@media(prefers-reduced-motion:reduce){.project-link,.t,.chips li{transition:none!important}}
+</style>
 </head>
 <body><svg class="theme-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="education-logo-tint" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feFlood style="flood-color:var(--accent)" result="theme-color"/><feComposite in="theme-color" in2="SourceAlpha" operator="in"/></filter></defs></svg><header class="site-nav"><a class="brand" href="#">JC<span>ENGINEERING PORTFOLIO</span></a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></header><div class="appearance theme-controls"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 
