@@ -647,7 +647,7 @@ var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,root=document.docum
 var hero=document.querySelector('.top');
 function crank(){hero.classList.toggle('turbo')}
 document.querySelector('.proc').addEventListener('click',crank);
-var v=document.getElementById('verb'),w=[['builds things','#projects'],['designs heat exchangers','#heat-exchanger'],['brews biodiesel','#biodiesel'],['tutors STEM subjects','#tutoring']],i=0,hold=false;
+var v=document.getElementById('verb'),w=[['builds things','#projects'],['designs heat exchangers','#heat-exchanger'],['models a natural gas chiller plant','#chiller-plant'],['brews biodiesel','#biodiesel'],['tutors STEM subjects','#tutoring']],i=0,hold=false;
 ['mouseenter','focus'].forEach(function(e){v.addEventListener(e,function(){hold=true})});
 ['mouseleave','blur'].forEach(function(e){v.addEventListener(e,function(){hold=false})});
 if(!rm){setInterval(function(){if(hold)return;v.classList.add('out');setTimeout(function(){i=(i+1)%w.length;v.textContent=w[i][0];v.setAttribute('href',w[i][1]);v.classList.remove('out')},300)},2600)}
@@ -656,7 +656,7 @@ var uses={
 'MATLAB':[['Biodiesel Production and Operations','#biodiesel','Calculated reactant quantities for the 3 L batch'],['Education: Chemical Engineering Analysis','#education','Used Python and MATLAB for engineering calculations and data analysis']],
 'Microsoft Excel':[['Production Engineering Intern, Rustique Wines','#rustique','Tracked tank conditions and spotted trends and process deviations']],
 'Onshape CAD':[['Shell-and-Tube Heat Exchanger Design','#heat-exchanger','Built the full CAD assembly']],
-'PRO/II':[['Education: Materials and Energy Balances','#education','Learned PRO/II in this course']],'Python':[['Education: Chemical Engineering Analysis','#education','Used Python and MATLAB for engineering calculations and data analysis']]
+'PRO/II':[['Natural Gas Chiller Plant Simulation','#chiller-plant','Built the plant model through Chiller Part 4'],['Education: Materials and Energy Balances','#education','Learned PRO/II in this course']],'Python':[['Education: Chemical Engineering Analysis','#education','Used Python and MATLAB for engineering calculations and data analysis']]
 };
 var panel=document.getElementById('skillpanel'),open=null;
 document.querySelectorAll('#skills button').forEach(function(b){b.addEventListener('click',function(){
